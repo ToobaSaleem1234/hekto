@@ -1,94 +1,115 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (
-    <div className="py-20 lg:px-20 px-6 font-sans text-[#151875]">
+    <div>
+
+      {/* header */}
+      <header className='w-full  h-72 bg-[#EEEFFB] p-28'>
+        <h1 className='text-5xl font-bold text-[#101750] flex  items-center pl-80'>About Us</h1>
+        <h2 className='text-gray-500 text-4xl mt-2 px-80'>Home.Pages. <span className='text-[#FF289F] text-4xl cursor-pointer hover:underline'> About Us </span></h2>
+      </header>
 
       {/* hero section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        <div className="pl-80">
-          <Image
-            src="/aboutpic1.png"
-            alt="Ecommerce Meeting"
-            width={500}
-            height={500}
-            className="rounded-lg shadow-md flex flex-row"
-          />
-        </div>
-        <div className="m-0 p-0">
-          <h2 className="text-4xl font-bold mb-6 flex-row">
-            Know About Our Ecommerce Business, History
-          </h2>
-          <p className="text-gray-600 mb-6 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem quam facere hic libero explicabo perferendis ullam alias ratione incidunt! Itaque quo, quaerat blanditiis molestias provident neque libero tempore officia.
+      <section>
+        <div className="flex flex-row gap-10 my-16 mx-[300px]">
+          <div className="left">
+            <Image className="h-[500px] w-[1800px]"
+            alt='about'
+            width={800}
+            height={1700}
+            src='/about/aboutpic.png'
+            />
 
-          </p>
-          <Link href="/contact" target="_blank">
-            <button className="px-6 py-2 bg-pink-500 text-white font-semibold rounded-md shadow-md hover:bg-pink-600">
-              Contact Us
-            </button>
-          </Link>
+          </div>
+          <div className="right flex flex-col gap-7">
+            <h1 className="font-bold text-[#151875] text-5xl mb-3 w-4/6 leading-relaxed">Know About Our Ecommerce Business,History</h1>
+            <p className="text-[#8A8FB9] leading-10 m-2 text-3xl w-5/6 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vel quos itaque veniam temporibus incidunt quidem velit voluptates veritatis. Beatae quo obcaecati nihil tenetur, iusto totam quasi quia ratione blanditiis.</p>
+            <Button className='bg-[#FB2E86] rounded-lg m-3 w-56 text-xl py-8 hover:bg-pink-400'>Contact Us</Button>
+          </div>
         </div>
-      </section >
+      </section>
 
       {/* features section */}
-      <section className="my-16 text-center mx-20">
-        <h2 className="text-3xl font-bold mb-8">
-          Our Features
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { icon: "/free-delivery 1.png", title: "Free Delivery" },
-            { icon: "/cashback 1.png", title: "100% Cash Back" },
-            { icon: "/premium-quality 1.png", title: "Quality Product" },
-            { icon: "/24-hours-support 1.png", title: "24/7 Support" },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="p-6 px-16 w-72 h-64 border rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            >
-              <Image
-                src={feature.icon}
-                alt={feature.title}
-                width={60}
-                height={60}
-                className="mb-4 mx-auto"
-              />
-              <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
-            </div>
-          ))}
+      <section>
+        <div className="mx-[300px]">
+          <h1 className='font-bold text-[#000000] text-5xl m-16 tracking-wider flex justify-center mt-36 '>Our features</h1>
+          <div className=" flex flex-row gap-8">
+
+
+          <div className="flex flex-col border border-solid m-4 p-4 justify-center items-center bg-white">
+            <Image className="rounded-md shadow-lg"
+            alt='free delivery'
+            width={100}
+            height={100}
+            src='/about/free-delivery.png'
+            />
+            <h2 className="font-bold tracking-wider text-[#151875] text-2xl m-2 leading-7 mt-5">Free Delivery</h2>
+            <p className='text-[#8A8FB9] leading-8 m-2 text-2xl tracking-wider text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut perferendis</p>
+          </div>
+
+          <div className="flex flex-col border border-solid m-4 p-4 justify-center items-center bg-white border-b-4 border-b-[#FF9100]">
+            <Image
+            alt='cash back'
+            width={100}
+            height={100}
+            src='/about/cashback.png'
+            />
+            <h2 className="font-bold tracking-wider text-[#151875] text-2xl m-2 leading-7 mt-5">100% Cash Back</h2>
+            <p className='text-[#8A8FB9] leading-8 m-2 text-2xl tracking-wider text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut perferendis</p>
+          </div>
+
+          <div className="flex flex-col border border-solid m-4 p-4 justify-center items-center bg-white">
+            <Image
+            alt='premium quality'
+            width={100}
+            height={100}
+            src='/about/premium-quality.png'
+            />
+            <h2 className="font-bold tracking-wider text-[#151875] text-2xl m-2 leading-7 mt-5">Quality Product</h2>
+            <p className='text-[#8A8FB9] leading-8 m-2 text-2xl tracking-wider text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut perferendis</p>
+          </div>
+
+          <div className="flex flex-col border border-solid m-4 p-4 justify-center items-center bg-white">
+            <Image
+            alt='24 hours support'
+            width={100}
+            height={100}
+            src='/about/24-hours-support .png'
+            />
+            <h2 className="font-bold tracking-wider text-[#151875] text-2xl m-2 mt-5 leading-7 ">24/7 Support</h2>
+            <p className='text-[#8A8FB9] leading-8 m-2 text-2xl tracking-wider text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aut perferendis</p>
+          </div>
+
+          </div>
         </div>
       </section>
 
       {/* client section */}
-      <section className="my-16 text-center">
-        <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Client Say!</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { name: "Selina Gomez", image: "/Group 200.png" },
-            { name: "John Doe", image: "/Mask Group.png" },
-            { name: "Emma Watson", image: "/Mask Group (2).png" },
-          ].map((client, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Image
-                src={client.image}
-                alt={client.name}
-                width={500}
-                height={500}
-                className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
-              />
-              <p className="text-[#151875] font-semibold">{client.name}</p>
-            </div>
-          ))}
+      <section>
+        <div className="bg-[#f5f5fd] mb-3">
+          <h1 className='font-bold text-[#000000] text-5xl p-16 tracking-wider flex justify-center mt-36 '>Our Client Say!</h1>
+          <div className=" flex flex-col justify-center items-center">
+          <Image className="w-[350px] h-[100px] mt-6"
+          alt='clients'
+          width={100}
+          height={100}
+          src='/about/clients.png'
+          />
+          <h2 className='text-4xl text-[black] mb-1 mt-3 p-4 font-medium tracking-wide leading-5'>Selina Gomez</h2>
+          <span className="text-[#8A8FB9] mb-4 text-xl">Ceo AC Watson Digital</span>
+          <p className='text-[#8A8FB9] leading-10 m-3 mb-5 text-2xl tracking-wide text-center w-7/12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, accusantium voluptas. Natus, totam. Illum quam dolore, sunt, minus eaque vitae, ratione odio voluptates officia quo facilis eum nesciunt option. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, at. Quis delectus dolorem perspiciatis aliquam harum amet. Expedita.</p>
+          <div className="flex flex-row gap-3 m-7">
+            <div className="w-5 h-1 bg-pink-300"></div>
+            <div className="w-7 h-1 bg-[#FB2E86]"></div>
+            <div className="w-5 h-1 bg-pink-300"></div>
+          </div>
+          </div>
+          
         </div>
-        <p className="mt-6 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non odio
-          eleifend nisl sollicitudin aliquet ut non felis.
-        </p>
       </section>
+
     </div>
   )
 }

@@ -2,18 +2,21 @@ import React from 'react';
 import { IoCartOutline, IoHeartOutline, IoSearch } from 'react-icons/io5';
 import { LuUserRound } from 'react-icons/lu';
 import Link from 'next/link';
+import "../styles/header.css"
 
 const Header = () => {
     return (
         <header className="font-[sans-serif] tracking-widest relative z-50">
             {/* Top Section */}
-            <section className="bg-[#7E33E0] py-2 px-4 sm:px-10 flex items-center flex-wrap justify-between">
-                <div className="flex items-center justify-around w-full sm:w-auto">
-                    <button type="button" className="text-white text-sm flex items-center">
+
+            <section id='header-container' className=" bg-[#7E33E0] py-2 px-4 flex items-center">
+
+                <div id='contact-info' className="flex items-center w-full">
+                    <button type="button" className="text-white text-2xl flex items-center tracking-widest">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="16px"
-                            height="16px"
+                            width="20px"
+                            height="20px"
                             fill="#fff"
                             className="mr-2"
                             viewBox="0 0 479.058 479.058"
@@ -24,11 +27,11 @@ const Header = () => {
                         </svg>
                         saleemtooba365@gmail.com
                     </button>
-                    <button type="button" className="text-white text-sm flex items-center ml-4">
+                    <button type="button" className="text-white text-2xl flex items-center ml-9 tracking-widest">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="16px"
-                            height="16px"
+                            width="20px"
+                            height="20px"
                             fill="#fff"
                             className="mr-2"
                             viewBox="0 0 482.6 482.6"
@@ -41,51 +44,52 @@ const Header = () => {
                     </button>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mt-2 sm:mt-0 sm:ml-auto">
-                    <select className="bg-[#7E33E0] text-white text-sm px-2 py-1">
+                <div id='actions' className="flex flex-wrap gap-5 mt-2">
+                    <select className="bg-[#7E33E0] text-white text-2xl px-2 py-1">
                         <option value="english">English</option>
                     </select>
-                    <select className="bg-[#7E33E0] text-white text-sm px-2 py-1">
+                    <select className="bg-[#7E33E0] text-white text-2xl px-2 py-1">
                         <option value="usd">USD</option>
                     </select>
-                    <a className="text-white flex items-center">
+                    <a className="text-white flex gap-3 items-center text-2xl">
                         Login
-                        <LuUserRound className="ml-1" />
+                        <LuUserRound size={35} className="ml-2" />
                     </a>
-                    <a className="text-white flex items-center">
+                    <a className="text-white flex gap-5 items-center text-2xl">
                         Wishlist
-                        <IoHeartOutline size={25} className="ml-1" />
+                        <IoHeartOutline size={35} className="ml-2" />
                     </a>
-                    <IoCartOutline size={25} className="text-white flex items-center mx-2 mt-1" />
+                    <IoCartOutline size={35} className="text-white flex items-center mt-1 gap-3" />
                 </div>
             </section>
 
             {/* Bottom Section */}
-            <div className="flex flex-wrap items-center justify-between px-4 py-3 sm:px-10 bg-white">
-                <h1 className="text-black text-4xl font-bold">
+            <section className="flex flex-wrap items-center justify-between px-9 py-8 sm:px-10 bg-white">
+                <h1 className="text-black text-7xl font-bold tracking-wider">
                     Hekto
                 </h1>
-                <nav className="hidden lg:flex gap-10">
-                    <select className=" text-red-700 text-sm font-medium cursor-pointer hover:underline">
+                <nav className="hidden lg:flex gap-20">
+                    <select className=" text-red-700 text-3xl font-medium cursor-pointer hover:underline">
                         <option value="Home">Home</option>
                     </select>
-                    <Link href='/' className="text-gray-700 text-sm font-medium hover:underline" target='_blank'>About</Link>
-                    <Link href='#contact' className="text-gray-700 text-sm font-medium hover:underline"target='_blank'>Contact</Link>
-                    <Link href='#cart' className="text-gray-700 text-sm font-medium hover:underline"target='_blank'>Cart</Link>
-                    <Link href='#productdetails' className="text-gray-700 text-sm font-medium hover:underline"target='_blank'>ProductDetails</Link>
+                    <Link href='/' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>About</Link>
+                    <Link href='#contact' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Contact</Link>
+                    <Link href='#cart' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Cart</Link>
+                    <Link href='#productdetails' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>ProductDetails</Link>
+                    <Link href='#account' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Account</Link>
                 </nav>
                 <div className="lg:hidden">
-                    <button className="text-gray-700 text-xl">Menu</button>
+                    <button className="text-gray-700 text-4xl">Menu</button>
                 </div>
                 <div className="flex items-center">
                     <input
                         type="text"
                         placeholder="Search..."
-                        className="border border-gray-300 rounded-l px-3 py-1 outline-none"
+                        className="border border-gray-300 rounded-l px-5 py-3 text-2xl outline-none"
                     />
-                    <IoSearch size={32} className="text-white bg-[#FB2E86]  text-xl rounded-r" />
+                    <IoSearch size={55} className="text-white bg-[#FB2E86]  text-2xl rounded-r" />
                 </div>
-            </div>
+            </section>
         </header>
     );
 };

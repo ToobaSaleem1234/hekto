@@ -7,7 +7,7 @@ import { RiLinkedinLine } from "react-icons/ri";
 export default function Footer() {
   return (
     <div>
-      <div className=" bg-[#EEEFFB] h-[532px] w-[1920] mt-[7500px] flex flex-row gap-96">
+      <div className=" bg-[#EEEFFB] h-[532px] w-full mt-5 flex flex-row gap-96">
         <div className="flex flex-col gap-10">
           <div className="w-[120px] ml-[310px]">
             <h1 className="text-[44px] font-bold mt-[95px]">Hekto</h1>
