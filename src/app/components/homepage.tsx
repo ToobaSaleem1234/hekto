@@ -8,8 +8,8 @@ const Homepage = () => {
         <div className='complete-homepage'>
 
             {/* promotional header */}
-            <header className='header-container flex flex-row bg-[#F2F0FF]  tracking-widest pl-96 px-14'>
-                <div className="header-black-image pl-52">
+            <header className='header-container flex flex-row bg-[#F2F0FF] tracking-wider pl-96'>
+                <div className="header-black-image">
                     <Image className='h-[600px]'
                         alt='lamp'
                         width={387}
@@ -17,13 +17,13 @@ const Homepage = () => {
                         src='/home/header/black pic.png'
                     />
                 </div>
-                <div className="header-content flex flex-col gap-6 my-24 w-[1500px]">
+                <div className="header-content flex flex-col gap-3 my-24 w-[1200px]">
                     <h2 className='text-[#FF289F] text-4xl font-bold mb-9 tracking-widest'>Best Furniture For Your Castle</h2>
                     <h1 className='text-[#000000] text-[43px] font-bold mb-5 w-[580px] h-36 tracking-wider'>New Furniture Collection Trends in 2020 </h1>
                     <p className='text-[#8A8FB9] text-3xl mb-7 w-2/3 tracking-widest leading-relaxed'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi accusantium expedita quasi amet vitae tempore ullam nisi ducimus sint magni, doloribus molestias, explicabo et, cumque dolor dolorum provident unde fugit!</p>
                     <Button className='bg-[#FF289F] text-white h-12 w-52 text-3xl my-3 p-7' variant="destructive">Shop Now</Button>
                 </div>
-                <div className="header-sofa-image mr-24">
+                <div className="header-sofa-image">
                     <Image className='w-[600px] h-[600px] mt-20'
                         alt='sofa'
                         width={900}
@@ -35,7 +35,7 @@ const Homepage = () => {
 
             {/* featured-products */}
             <section>
-                <div className="feature-container">
+                <div className="feature-container mx-[400px]">
 
                     {/* heading */}
                     <h1 className='py-24 flex justify-center text-[#1A0B5B] text-5xl font-bold tracking-wider'>Featured Products</h1>
@@ -133,7 +133,7 @@ const Homepage = () => {
 
             {/* latest-products */}
             <section>
-                <div className='latest-container'>
+                <div className='latest-container mx-[400px]'>
 
                     {/* heading */}
                     <h1 className='m-16 flex justify-center text-[#1A0B5B] text-5xl font-bold tracking-wider'>Latest Products</h1>
@@ -245,7 +245,7 @@ const Homepage = () => {
 
             {/* What Shopex Offer! */}
             <section>
-                <div className="mx-[300px] mb-20">
+                <div className="mx-[400px] mb-20">
                     <h1 className='m-16 flex justify-center text-[#1A0B5B] text-5xl font-bold tracking-wider'>What Shopex Offer!</h1>
                     <div className=" flex flex-row gap-8">
                         <div className="flex flex-col border border-solid m-4 p-4 justify-center items-center bg-white shadow-2xl">

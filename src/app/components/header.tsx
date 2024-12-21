@@ -9,7 +9,7 @@ const Header = () => {
         <header className="font-[sans-serif] tracking-widest relative z-50">
             {/* Top Section */}
 
-            <section id='header-container' className=" bg-[#7E33E0] py-2 px-4 flex items-center">
+            <section id='header-container' className=" bg-[#7E33E0] py-2 px-2 flex items-center">
 
                 <div id='contact-info' className="flex items-center w-full">
                     <button type="button" className="text-white text-2xl flex items-center tracking-widest">
@@ -64,7 +64,7 @@ const Header = () => {
             </section>
 
             {/* Bottom Section */}
-            <section className="flex flex-wrap items-center justify-between px-9 py-8 sm:px-10 bg-white">
+            <section className="flex flex-wrap items-center justify-between px-9 py-5 sm:px-10 bg-white">
                 <h1 className="text-black text-7xl font-bold tracking-wider">
                     Hekto
                 </h1>
@@ -72,7 +72,7 @@ const Header = () => {
                     <select className=" text-red-700 text-3xl font-medium cursor-pointer hover:underline">
                         <option value="Home">Home</option>
                     </select>
-                    <Link href='/' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>About</Link>
+                    <Link href='#about' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>About</Link>
                     <Link href='#contact' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Contact</Link>
                     <Link href='#cart' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Cart</Link>
                     <Link href='#productdetails' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>ProductDetails</Link>
