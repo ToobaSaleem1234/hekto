@@ -72,11 +72,11 @@ const Header = () => {
                     <select className=" text-red-700 text-3xl font-medium cursor-pointer hover:underline">
                         <option value="Home">Home</option>
                     </select>
-                    <Link href='#about' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>About</Link>
-                    <Link href='#contact' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Contact</Link>
-                    <Link href='#cart' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Cart</Link>
-                    <Link href='#productdetails' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>ProductDetails</Link>
-                    <Link href='#account' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Account</Link>
+                    <Link href='/about' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>About</Link>
+                    <Link href='/contact' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Contact</Link>
+                    <Link href='/cart' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Cart</Link>
+                    <Link href='/productdetails' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>ProductDetails</Link>
+                    <Link href='/account' className="text-gray-700 text-3xl font-medium hover:underline" target='_blank'>Account</Link>
                 </nav>
                 <div className="lg:hidden">
                     <button className="text-gray-700 text-4xl">Menu</button>
